@@ -8,5 +8,9 @@ import org.http4k.format.Jackson.auto
 val trainLens = Body.auto<List<Train>>().toLens()
 
 fun createTrainRoute(getTrains: GetTrains): HttpHandler {
-    return { Response(Status.OK).with(trainLens of emptyList()) }
+    return {
+        val departureStation = it.query("departureStation")!!
+        val destinationStation = it.query("destinationStation")!!
+        Response(Status.OK).with(trainLens of getTrains(departureStation, destinationStation))
+    }
 }
