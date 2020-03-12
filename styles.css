@@ -1,0 +1,40 @@
+.time-label {
+    display: inline-block;
+}
+
+.time {
+    display: inline-block;
+}
+
+.train-info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 3;
+    border-style: solid;
+    padding: 10px;
+    margin: 10px;
+}
+
+.status {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    border-style: solid;
+    padding: 10px;
+    margin: 10px;
+}
+
+.train {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    border-style: dashed;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.trains {
+    display: flex;
+    flex-direction: column;
+}
