@@ -49,6 +49,12 @@ application {
     mainClassName = "MainKt"
 }
 
+jib {
+    container {
+        mainClass = application.mainClassName
+    }
+}
+
 tasks {
     withType<KotlinCompile> {
         kotlinOptions.jvmTarget = "11"
